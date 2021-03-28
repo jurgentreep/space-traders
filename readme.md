@@ -1,5 +1,7 @@
 # Space Traders
 
+Space Traders script that plays the game at https://spacetraders.io
+
 ## Install
 
 ```bash

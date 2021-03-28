@@ -1,6 +1,6 @@
 # Space Traders
 
-# Install
+## Install
 
 ```bash
 cp .env.example .env
@@ -11,6 +11,8 @@ Add your `ST_USERNAME` and `ST_TOKEN` to the `.env` file. Replace the `shipId` i
 ```bash
 npm i
 ```
+
+## Run
 
 ```bash
 npm start

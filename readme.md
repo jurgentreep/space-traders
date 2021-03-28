@@ -19,3 +19,29 @@ npm i
 ```bash
 npm start
 ```
+
+## Build
+
+```bash
+npm run build
+```
+
+Will output a single file called `index.js` to the `dist` directory. This can than be easily deployed on a server. Don't forget to copy the `.env` file or set the variables yourself.
+
+## Deploy
+
+### Locally
+
+```bash
+scp .env aws:~/space-traders/.env
+```
+
+```bash
+scp dist/index.js aws:~/space-traders/index.js
+```
+
+### On the server
+
+```bash
+pm2 start space-traders/index.js --no-autorestart --source-map-support
+```

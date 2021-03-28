@@ -1,8 +1,8 @@
 require('dotenv').config()
+import got from 'got';
+import { FlightPlanResponse } from 'spacetraders-sdk/dist/types'
 
-const got = require('got')
-
-const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms))
+const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms))
 
 const headers = {
   'authorization': `Bearer ${process.env.ST_TOKEN}`
@@ -42,7 +42,7 @@ const shipId = 'ckmk9z4j31495121bs6gagc75xi'
         shipId,
         destination: 'OE-PM'
       }
-    }).json()
+    }).json() as FlightPlanResponse
     console.log(response3)
 
     await delay(response3.flightPlan.timeRemainingInSeconds * 1000)
@@ -91,7 +91,7 @@ const shipId = 'ckmk9z4j31495121bs6gagc75xi'
         shipId,
         destination: 'OE-PM-TR'
       }
-    }).json()
+    }).json() as FlightPlanResponse
     console.log(response7)
 
     await delay(response7.flightPlan.timeRemainingInSeconds * 1000)

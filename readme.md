@@ -1,6 +1,6 @@
 # Space Traders
 
-Space Traders script that plays the game at https://spacetraders.io
+Script that plays the game https://spacetraders.io
 
 ## Install
 
